@@ -1,0 +1,334 @@
+@charset "UTF-8";
+
+/*------------------------------------*\
+  #GENERAL WEBSITE STYLES
+\*------------------------------------*/
+
+@font-face {
+	font-family: Handwriting;
+	src: url(http://jenyalestina.com/JenyasHandwriting-Regular.ttf);
+}
+
+body {
+	background-image: url("starry night.jpg");
+}
+
+#top {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 960px;
+}
+
+.wrapper {
+	background-color: #d3d3d3; /*d3d3d3*/
+	max-width: 1100px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	bottom: 20px;
+	padding-bottom: 30px;
+}
+
+#nav ul {
+	list-style: none;
+	background-color: #a8a195; /*A9A9A9*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1060px;
+	text-align: center;
+}
+
+.nav li {
+	display: inline-block;
+	padding: 0px 30px 0px 30px;
+	font-family: Helvetica, sans-serif;
+}
+
+.nav a:link {
+	color: black;
+}
+
+.nav a:visited {
+	color: #302d2d
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding-left: 30px;
+	font-family: Garamond, serif;
+	color: #600000
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	margin: 2px;
+}
+
+p {
+	padding-left: 30px;
+	padding-right: 15px;
+	font-family: Helvetica, sans-serif;
+}
+
+hr { 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    width: 95%;
+}
+
+video {
+	margin-left: 10%;
+	margin-bottom: 10px;
+	width: 80%;
+}
+
+ul {
+	margin-left: 20px;
+	font-size: 16px;
+	font-family: Helvetica, sans-serif;
+}
+
+/*------------------------------------*\
+  #MOBILE ADAPTIONS
+\*------------------------------------*/
+
+
+@media screen and (min-width: 1200px){
+	.wrapper {
+		width: (.8*screen.width);
+	}
+	
+	#selfportrait {
+		height: 200px;
+		float: right;
+		padding: 20px;
+	}
+	
+	/* Larger screens don't need the nav dropdown,
+	 so hide it */
+	.dropdown {
+		display: none;
+	}
+	
+	nav.desktop a + nav { display: none; }
+	
+	nav.desktop a:hover + nav { display: block; }
+	
+	nav.desktop nav:hover { display: block; }
+	
+	nav.mobile { display: none; }
+	
+	/* Skills dropdown content 
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #f1f1f1;
+	    min-width: 160px;
+	    font-size: 30px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+	
+	.skillsDropdown {
+	    position: relative;
+	    display: inline-block;
+	}
+	
+	.dropdown-content a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	}
+	
+	.dropdown-content a:hover {
+		background-color: #ddd
+	}
+
+	.show {
+		display: block;
+	} */
+}
+
+@media screen and (max-width: 1200px) {
+	
+	.wrapper {
+		width: screen.width;
+	}
+	
+	p {
+		font-size: 18px;
+	}
+	
+	
+	#top img {
+		width: 80%;
+	}
+	
+	#selfportrait {
+		height: 200px;
+		padding: 20px;
+	}
+	
+	
+	/* Makes the nav not display 
+	on smaller screens */
+	.nav {
+		display: none;
+	}
+	
+	
+	/* Styles for the dropdown menu, 
+	which is displayed instead */
+	.dropbtn {
+	    background-color: #A9A9A9;
+	    color: black;
+	    padding: 16px;
+	    font-size: 30px;
+	    border: none;
+	    cursor: pointer;
+	}
+
+	.dropbtn:hover, .dropbtn:focus {
+	    background-color: #A0A0A0;
+	}
+
+	/* positions the dropdown content */
+	.dropdown {
+	    position: relative;
+	    display: inline-block;
+	}
+
+	/* Dropdown content */
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #f1f1f1;
+	    min-width: 160px;
+	    font-size: 30px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+
+	.dropdown-content a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	}
+	
+	.dropdown-content a:hover {
+		background-color: #ddd
+	}
+
+	.show {
+		display: block;
+	}
+}
+
+/*------------------------------------*\
+  #SKILLS PAGE STYLES
+\*------------------------------------*/
+
+#webdesign img {
+	float: right;
+	width: 33%;
+	border: 1px solid black;
+	margin-right: 30px;
+	margin-left: 10px;
+	margin-top: 15px;
+}
+
+#ai img {
+	float: right;
+	width: 50%;
+	margin-right: 30px;
+}
+
+/*------------------------------------*\
+  RESUME PAGE STYLES
+\*------------------------------------*/
+
+#resume {
+	background-color: white;
+	font-family: Helvetica, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	padding: 20px;
+}
+
+#resume p {
+	padding: 0px;
+}
+
+#resume a {
+	color: black;
+}
+
+.contact-section {
+	float: right;
+	text-align: left;
+}
+
+.skills-section p {
+	text-align: center;
+}
+
+.school img {
+	float: left;
+	padding: 10px;
+}
+
+.skills-images {
+	display: grid;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	grid-template-columns: auto auto auto auto;
+}
+
+.date {
+	padding-right: 30px;
+}
+
+/*------------------------------------*\
+  MISCELLANEOUS IMAGE STYLES
+\*------------------------------------*/
+
+#hire {
+	height: 200px;
+    float: right;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+#java {
+	height: 150px;
+    float: right;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+#sql {
+	height: 200px;
+    float: right;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.commission {
+	height: 200px;
+	float: right;
+	margin-right: 15px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
