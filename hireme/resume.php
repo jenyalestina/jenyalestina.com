@@ -10,7 +10,7 @@
         <div class="wrapper">
         <?php include 'z-navhire.php';?>
         	<h1>Resume</h1>
-        		<p>Download this resume <a href="Resume.pdf">as a PDF</a></p>
+        		<p>Download this resume <a href="Resume 2019.pdf">as a PDF</a></p>
         		<p>Download <a href="Jenya Pitchdeck.pptx">my pitch deck</a></p>
         		<div id="resume">
         			<div id="objecive">
