@@ -61,10 +61,10 @@
         			</div>
               <div class="contact-section">
           				<img src="contact.png" alt="Contact Me:">
-          				<p><a href="contact.php">jenya@jenyalestina.com</a></p>
-          				<p><a href="http://www.linkedin.com/in/jenya-lestina/">LinkedIn: jenya-lestina</a></p>
-                  <p><a href="https://github.com/jenyalestina">Github: jenyalestina</a></p>
-          				<p>(412)477-0566</p>
+                  <p><a href="contact.php">jenya@jenyalestina.com</a><br>
+          				<a href="http://www.linkedin.com/in/jenya-lestina/">LinkedIn: jenya-lestina</a><br>
+                  <a href="https://github.com/jenyalestina">Github: jenyalestina</a><br>
+          				(412)477-0566</p>
           			</div>
           			<div class="education">
           				<img src="education.png" alt="Education:">
