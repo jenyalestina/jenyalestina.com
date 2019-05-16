@@ -15,67 +15,69 @@
         		<div id="resume">
         			<div id="objecive">
         				<img src="objective.png" alt="Objective:">
-        				<p>An entry-level technology position that leverages my skills in web
-        				design/development, SQL, Java, graphic design, and/or communication.</p>
-        			</div>
-    				<div class="contact-section">
-        				<img src="contact.png" alt="Contact Me:">
-        				<p><a href="contact.php">jenya at jenyalestina dot com</a></p>
-        				<p><a href="http://www.linkedin.com/in/jenya-lestina/">LinkedIn: jenya-lestina</a></p>
-        				<p>(412)477-0566</p>
-        			</div>
-        			<div class="education">
-        				<img src="education.png" alt="Education:">
-        				<div class="school">
-        					<img src="ccac.png" alt="CCAC">
-        					<p>Community College of Allegheny County, Pittsburgh, PA <br>
-        					A.S. in Computer Information Systems, Dec 2018 <br>
-        					3.6 GPA, Dean’s List, 57 credit hours completed</p>
-        				</div>
-        				<div class="school">
-        					<img src="home.png" alt= "Homeschool">
-        					<p>Home Schooled High School Student, Wexford, PA <br>
-        					Diploma, May 2018 <br>
-        					Honors: AP Scholar with Distinction, multiple NLE golds</p>
-        				</div>
+        				<p>A position at a technology-focused company which leverages my skills in
+                  programming and/or technology.</p>
         			</div>
         			<div class="skills-section">
         				<img src="skills.png" alt="Skills:">
         				<div class="skills-images">
+        					<img src="golang.png" alt="Golang">
+        					<img src="python.png" alt="Python">
         					<img src="html.png" alt="HTML/CSS">
-        					<img src="java.png" alt="Java">
-        					<img src="javascript.png" alt="JavaScript">
+                  <img src="illustrator.png" alt="Adobe Illustrator">
         					<img src="sql.png" alt="SQL Server">
-        					<img src="illustrator.png" alt="Adobe Illustrator">
+        					<img src="javascript.png" alt="JavaScript">
+        					<img src="java.png" alt="Java">
         					<img src="photoshop.png" alt="Photoshop">
-        					<img src="word.png" alt="Word">
-        					<img src="powerpoint.png" alt="PowerPoint">
         				</div>
-        				<p>Raw hand-coding of HTML/CSS/PHP and JavaScript; with Wordpress, responsive design <br>
-        				Proficiency in SQL Server, systems analysis and design <br>
-        				Free hand drawing, pen and ink, typography, Wacom tablet, Adobe Suite <br>
-        				Writing, Editing, Proofreading, General Administrative Skills, Microsoft Office Suite <br>
-        				Types 100+ words per minute, excellent oral and written communication skills </p>
+                <div class="skills-list">
+          				<p>Keyword research and organization using Ahrefs, KWFinder, SEMrush <br>
+          				SEO optimized content writing with Clearscope <br>
+          				Technical SEO with ScreamingFrog, Merkle, Google PageSpeed Insights, and GTmetrix <br>
+          				SEO metadata optimization (meta titles, descriptions, URL slugs) <br>
+                  Backlink generation and maintenance using Ahrefs, SEMrush, HARO <br>
+          				Type 100+ words per minute, excellent oral and written communication skills <br>
+                  Writing, Editing, Proofreading</p>
+                </div>
         			</div>
         			<div class="work-experience">
         				<img src="work-experience.png" alt="Work Experience:">
-        				<p><strong><span class="date">Oct 2015 - present</span>  Copy Editor and Graphic Designer,
-        				Codex Enterprises</strong><br>
-        				Proofed and edited books, including educational materials and how-to manuals.  Created
-        				logos and graphics for web sites, including web design, color scheme and all graphics for
-        				speset.com. Used Adobe Illustrator, CSS and HTML. Also provided general administrative
-        				support including handling correspondence, filing, typing, and organizing paperwork.
-        				Occasional and part-time.</p>
-        				<p><strong><span class="date">Apr 2015 - Dec 2017</span> Prep Cook, Eat N’ Park</strong><br>
-        				Worked 20-28 hours/week preparing meal components, baking cookies, and doing general
-        				kitchen work. During my two year tenure in this job, I received several raises and
-        				became one of the most senior people in my department. I was asked to train new hires,
-        				and was routinely called in on short notice when extra help was needed.</p>
-        				<p><strong><span class="date">Dec 2011 - Apr 2015</span> Volunteer Activities Assistant,
-        				Sunrise Senior Living</strong><br>
-        				Volunteered as an activities assistant at this senior living center, led activities for
-        				the elderly residents including reading stories to them and leading them in various games.</p>
+        				<p><strong><span class="date">Mar 2019 - present</span>  Digital Marketer, Upgrow, Inc.
+                  (San Francisco, CA)</strong><br>
+                  Responsible for all aspects of search engine optimization for this marketing consulting
+                  firm. Clients are mostly high tech, including InfluxData, Split Software, MemSQL, and
+                  Seal Software. Client projects include keyword research, technical SEO audits, writing
+                  optimized copy, and backlink generation.</p>
+        				<p><strong><span class="date">Jan 2018 - Jun 2018</span> Lead Account Representative,
+                  Omni Flow Consulting (Pittsburgh, PA)</strong><br>
+                  Was responsible for direct sales of telecommunications products and services. Did
+                  prospecting, cold calls, lead follow-up, and provided sales activity and sales funnel
+                  reporting information to management.</p>
+        				<p><strong><span class="date">Oct 2015 - Aug 2018</span> Web and Graphic Design Intern,
+                  CodeX Enterprises (Pittsburgh, PA)</strong><br>
+                  Built websites for small businesses by hand in HTML, CSS, PHP, and JS. Wrote and
+                  proofread marketing copy and used Adobe Creative Suite to design logos, graphics,
+                  and webpage layouts.</p>
         			</div>
+              <div class="contact-section">
+          				<img src="contact.png" alt="Contact Me:">
+          				<p><a href="contact.php">jenya@jenyalestina.com</a></p>
+          				<p><a href="http://www.linkedin.com/in/jenya-lestina/">LinkedIn: jenya-lestina</a></p>
+                  <p><a href="https://github.com/jenyalestina">Github: jenyalestina</a></p>
+          				<p>(412)477-0566</p>
+          			</div>
+          			<div class="education">
+          				<img src="education.png" alt="Education:">
+          				<div class="school">
+          					<p>A.S. in Computer Information Systems, Dec 2018 <br>
+                    &ensp;Community College of Allegheny County, Pittsburgh, PA <br>
+          					&ensp;3.7 GPA, Dean’s List</p>
+          				</div>
+          				<div class="school">
+          					<p>Wexford Academy High School, 2018<br>
+          					&ensp;National Merit Commended Scholar, AP Scholar with Distinction</p>
+          				</div>
+          			</div>
         		</div>
         </div>
         <script src="../script.js"></script>

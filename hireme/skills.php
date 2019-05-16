@@ -10,12 +10,30 @@
         <div class="wrapper">
         <?php include 'z-navhire.php';?>
         		<h1>Skills</h1>
+              <h2>Data Science and Machine Learning</h2>
+              <hr>
+              <p>I do machine learning and data science using Python and its various data science
+                and machine learning related libraries, including TensorFlow, Pandas, NumPy,
+                SciPy, SciKitLearn, MatPlotLib, Seaborn, and StatsModels.</p>
+              <p>I learned data science for a professional development project (PDP) before I began
+                my Praxis apprenticeship, and I wrote weekly blogs over the course
+                of learning these skills. Here are the blog posts:<br>
+                 <a href="http://www.jenyalestina.com/blog/2019/01/27/pdp-1/">PDP 1</a> •
+                 <a href="http://www.jenyalestina.com/blog/2019/02/03/pdp-2/">PDP 2</a> •
+                 <a href="http://www.jenyalestina.com/blog/2019/02/10/pdp-3/">PDP 3</a> •
+                 <a href="http://www.jenyalestina.com/blog/2019/02/17/pdp-4/">PDP 4</a> •
+                 <a href="http://www.jenyalestina.com/blog/2019/02/26/pdp-5/">PDP 5</a></p>
+              <p>Unfortunately, before I could finish this project (which was supposed to be six weeks long), I
+                <a href="http://www.jenyalestina.com/blog/2019/03/19/where-did-i-disappear-to-week-1-at-upgrow-inc/">moved across the country</a>. Fortunately, of late I've been improving greatly at my
+                day job, so I'll be picking ML back up again, and I will have a few projects showing
+                up in this section shortly.</p>
+
         		<div id="webdesign">
         			<h2>Web Design and Development</h2>
         			<hr>
         			<img src="speset layout.png" alt="Speset homepage">
         			<p>I'm proficient in HTML5, CSS3, JavaScript, and PHP. I hand-code in these
-        			using a number of IDEs, including Visual Studio and CodeLobster.</p>
+        			using a number of IDEs, including Visual Studio and Atom.</p>
         			<p>I've personally designed and coded this website you're on right now, as well as
         			<a href="http://speset.com/">Speset.com</a>.</p>
               <p><a href="html.php">Learn more about my HTML and CSS skills and projects here.</a></p>
@@ -24,7 +42,7 @@
         			Free Code Camp; self-study using textbooks such as "HTML, CSS, & JavaScript Web Publishing"
         			by Colburn, Kyrnin, and Lemay; and classes in both high school and college, including AP CSP,
         			where I coded a JavaScript applet for my final project (and got a 5/5 on the AP exam), and
-        			several classes at CCAC (my local community college), and a web development class
+        			several classes at CCAC (my local community college at the time), and a web development class
         			(in which I got an A).</p>
         			<p>I am a certified Microsoft Technology Associate in HTML and CSS.</p>
         			<p>I am also a certified MTA in JavaScript.</p>

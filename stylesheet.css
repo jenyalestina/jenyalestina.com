@@ -56,6 +56,14 @@ body {
 	color: #302d2d
 }
 
+a:link {
+	color: #A00000
+}
+
+a:visited {
+	color: #600000
+}
+
 h1, h2, h3, h4, h5, h6 {
 	padding-left: 30px;
 	font-family: Garamond, serif;
@@ -76,7 +84,7 @@ p {
 	font-family: Helvetica, sans-serif;
 }
 
-hr { 
+hr {
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: auto;
@@ -106,28 +114,28 @@ ul {
 	.wrapper {
 		width: (.8*screen.width);
 	}
-	
+
 	#selfportrait {
 		height: 200px;
 		float: right;
 		padding: 20px;
 	}
-	
+
 	/* Larger screens don't need the nav dropdown,
 	 so hide it */
 	.dropdown {
 		display: none;
 	}
-	
+
 	nav.desktop a + nav { display: none; }
-	
+
 	nav.desktop a:hover + nav { display: block; }
-	
+
 	nav.desktop nav:hover { display: block; }
-	
+
 	nav.mobile { display: none; }
-	
-	/* Skills dropdown content 
+
+	/* Skills dropdown content
 	.dropdown-content {
 	    display: none;
 	    position: absolute;
@@ -137,19 +145,19 @@ ul {
 	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	    z-index: 1;
 	}
-	
+
 	.skillsDropdown {
 	    position: relative;
 	    display: inline-block;
 	}
-	
+
 	.dropdown-content a {
 	    color: black;
 	    padding: 12px 16px;
 	    text-decoration: none;
 	    display: block;
 	}
-	
+
 	.dropdown-content a:hover {
 		background-color: #ddd
 	}
@@ -160,34 +168,34 @@ ul {
 }
 
 @media screen and (max-width: 1200px) {
-	
+
 	.wrapper {
 		width: screen.width;
 	}
-	
+
 	p {
 		font-size: 18px;
 	}
-	
-	
+
+
 	#top img {
 		width: 80%;
 	}
-	
+
 	#selfportrait {
 		height: 200px;
 		padding: 20px;
 	}
-	
-	
-	/* Makes the nav not display 
+
+
+	/* Makes the nav not display
 	on smaller screens */
 	.nav {
 		display: none;
 	}
-	
-	
-	/* Styles for the dropdown menu, 
+
+
+	/* Styles for the dropdown menu,
 	which is displayed instead */
 	.dropbtn {
 	    background-color: #A9A9A9;
@@ -225,7 +233,7 @@ ul {
 	    text-decoration: none;
 	    display: block;
 	}
-	
+
 	.dropdown-content a:hover {
 		background-color: #ddd
 	}
@@ -284,11 +292,6 @@ ul {
 	text-align: center;
 }
 
-.school img {
-	float: left;
-	padding: 10px;
-}
-
 .skills-images {
 	display: grid;
 	grid-column-gap: 10px;
@@ -331,4 +334,24 @@ ul {
 	margin-right: 15px;
     margin-left: 10px;
     padding-bottom: 10px;
+}
+
+.html img {
+	height: 200px;
+	float: right;
+	margin-right: 15px;
+	margin-left: 10px;
+	border: 1px solid black;
+	position: relative;
+	top: -40px;
+}
+
+.sad {
+	height: 200px;
+	float: right;
+	margin-right: 15px;
+	margin-left: 10px;
+	border: 1px solid black;
+	position: relative;
+	top: -40px;
 }

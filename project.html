@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create Performance Task</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/951266ce3630412f2bfccdf898f2c36911621209/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Create Performance Task</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+
+<script>
+window.onload = function() {
+
+    /* This program creates a menu of buttons: a circle, a line,
+and a rectangle. When the user clicks any of the buttons,
+they can then click anywhere on the screen to create a shape
+of their choice, and drag to resize that shape. Once the
+mouse button is released, the shape is displayed to the
+screen. */
+
+function start() {
+    createMenu();
+    mouseClickMethod(activateMenu);
+}
+
+//creates the menu with the images but does NOT allow
+//the user to interact with that menu
+function createMenu() {
+    var menuBar = new Rectangle(getWidth(),55);
+    menuBar.setPosition(0,0);
+    menuBar.setColor(Color.black);
+    add(menuBar);
+    
+    var circleButton = new WebImage("https://codehs.com/uploads/b456b3fe47b7e4d3a48dd2b36ff5e133");
+    circleButton.setPosition(0,0);
+    circleButton.setSize(50,50);
+    add(circleButton);
+    var rectangleButton = new WebImage("https://codehs.com/uploads/c7d87e79932d0e526fcfd2e51f70bbdc");
+    rectangleButton.setPosition(55,0);
+    rectangleButton.setSize(50,50);
+    add(rectangleButton);
+    var lineButton = new WebImage("https://codehs.com/uploads/3b1beb6d375bf1206bb7a261b27cda98");
+    lineButton.setPosition(110,0);
+    lineButton.setSize(50,50);
+    add(lineButton);
+    var colorCircleButton = new WebImage("https://codehs.com/uploads/23d4e27d0e7a8d7d15dbdd54fb7d3080");
+    colorCircleButton.setPosition(165,0);
+    colorCircleButton.setSize(50,50);
+    add(colorCircleButton);
+    var colorRectangleButton = new WebImage("https://codehs.com/uploads/895c31b5df726f26afa2603e4f3957ea");
+    colorRectangleButton.setPosition(220,0);
+    colorRectangleButton.setSize(50,50);
+    add(colorRectangleButton);
+}
+
+/* this function returns true if the mouse has clicked in
+the area occupied by the image and false otherwise.
+once the button has been clicked, it forwards
+the button's purpose to a separate function
+depending on which button was clicked */
+function activateMenu(e) { 
+    var isCircleX;
+    var isRectangleX;
+    var isLineX;
+    var isCCircleX;
+    var isCRectangleX;
+    var isY;
+    
+    if(e.getX()>=0 && e.getX()<=50) {
+        isCircleX = true;
+    } else if(e.getX()>=55 && e.getX()<=105) {
+        isRectangleX = true;
+    } else if(e.getX()>=110 && e.getX()<=160) {
+        isLineX = true;
+    } else if(e.getX()>=165 && e.getX()<=215) {
+        isCCircleX = true;
+    } else if(e.getX()>=220 && e.getX()<=270) {
+        isCRectangleX = true;
+    }
+    
+    if(e.getY()>=0 && e.getY()<=50) {
+        isY = true;
+    }
+    
+    if(isCircleX&&isY) {
+        mouseDownMethod(drawCircle);
+    } else if(isRectangleX&&isY) {
+        mouseDownMethod(drawRectangle);
+    } else if(isLineX&&isY) {
+        mouseDownMethod(drawLine);
+    } else if(isCCircleX&&isY) {
+        mouseDownMethod(drawColorCircle);
+    } else if(isCRectangleX&&isY) {
+        mouseDownMethod(drawColorRectangle);
+    }
+}
+
+//creates the circle
+var circle;
+function drawCircle(e) {
+    circle = new Circle(0);
+    circle.setPosition(e.getX(),e.getY());
+    mouseDragMethod(adjustCircle);
+}
+
+//runs until the mouse is released
+function adjustCircle() {
+    mouseUpMethod(displayCircle);
+}
+
+//finishes making the circle and diplays it to the screen
+function displayCircle(e) {
+    //the coordinates of the circle center
+    var centerX = circle.getX();
+    var centerY = circle.getY();
+    //the coordinates of the mouseUp
+    var endX = e.getX();
+    var endY = e.getY();
+    //calculating the distance between those points
+    var rad = distance(centerX,centerY,endX,endY);
+    //setting the radius of the circle to that distance
+    circle.setRadius(rad);
+    add(circle);
+}
+
+//finds the distance between two points, using distance
+//formula, returns the result
+function distance(x1,x2,y1,y2) {
+    var x = x2-x1;
+    var y = y2-y1;
+    var powX = Math.pow(x,2);
+    var powY = Math.pow(y,2);
+    var result = Math.sqrt(powX + powY);
+    return result;
+}
+
+//creates a line wherever the user clicks
+var line;
+function drawLine(e) {
+    line = new Line(e.getX(), e.getY(),
+					e.getX(), e.getY());
+	add(line);
+	mouseDragMethod(adjustLine);
+}
+
+//when the user drags the mouse, adjust the endpoint of
+//the line to wherever they drag it
+function adjustLine(e) {
+    line.setEndpoint(e.getX(), e.getY());
+}
+
+//creates the rectangle, also saves the top left corner's
+//position coordinates for later use
+var rect;
+var posX;
+var posY;
+function drawRectangle(e) {
+    rect = new Rectangle(0,0);
+    posX = e.getX();
+    posY = e.getY();
+    mouseDragMethod(adjustRectangle);
+}
+
+//adjust the rectangle
+function adjustRectangle(e) {
+    mouseUpMethod(displayRectangle);
+}
+
+//recreate the rectangle with the updated length and width
+//values, then display it to the screen
+function displayRectangle(e) {
+    //the coordinates of the upper left corner
+    var x1 = rect.getX();
+    var y1 = rect.getY();
+    //the coordinates of the lower right corner
+    var x2 = e.getX();
+    var y2 = e.getY();
+    var length = findSide(x1,x2);
+    var width = findSide(y1,y2);
+    rect = new Rectangle(length,width);
+    rect.setPosition(posX,posY);
+    add(rect);
+}
+
+function drawColorCircle(e) {
+    circle = new Circle(0);
+    circle.setPosition(e.getX(),e.getY());
+    mouseDragMethod(adjustColorCircle);
+}
+
+function adjustColorCircle(e) {
+    mouseUpMethod(displayColorCircle);
+}
+
+function displayColorCircle(e) {
+    //circle center coordinates
+    var centerX = circle.getX();
+    var centerY = circle.getY();
+    //coordinates where the user released the mouse
+    var endX = e.getX();
+    var endY = e.getY();
+    //calculating the distance between the points
+    var rad = distance(centerX,centerY,endX,endY);
+    //setting the radius of the circle to that distance
+    circle.setRadius(rad);
+    //setting the color of the circle to change on a timer
+    setTimer(circleChange,1000);
+}
+
+function circleChange() {
+    var color = Randomizer.nextColor();
+    circle.setColor(color);
+    add(circle);
+}
+
+var rectangle;
+function drawColorRectangle(e) {
+    rectangle = new Rectangle(0,0);
+    posX = e.getX();
+    posY = e.getY();
+    rectangle.setPosition(e.getX(),e.getY());
+    mouseDragMethod(adjustColorRectangle);
+}
+
+function adjustColorRectangle(e) {
+    mouseUpMethod(displayColorRectangle);
+}
+
+function displayColorRectangle(e) {
+    //the coordinates of the upper left corner
+    var x1 = rectangle.getX();
+    var y1 = rectangle.getY();
+    //the coordinates of the lower right corner
+    var x2 = e.getX();
+    var y2 = e.getY();
+    var length = findSide(x1,x2);
+    var width = findSide(y1,y2);
+    rectangle = new Rectangle(length,width);
+    rectangle.setPosition(posX,posY);
+    setTimer(rectangleChange,1000);
+    add(rectangle);
+}
+
+function rectangleChange() {
+    var color = Randomizer.nextColor();
+    rectangle.setColor(color);
+}
+
+//returns |a-b|
+function findSide(a,b) {
+    if (a>b) {
+        return a-b;
+    } else {
+        return b-a;
+    }
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
